@@ -1,0 +1,16 @@
+= Asset Toolbawks - Installation Directions
+
+1. Create your Rails application, set up your databases.
+
+2. Install the Asset Toolbawks (it will install Engines if it doesn't already exist)
+	
+	script/plugin install http://svn.toolbocks.com/plugins/asset_toolbawks/
+
+	a) If you didn't have engines already installed, add the following within the 
+		 "Rails::Initializer.run do |config|" block in config/environment.rb
+
+    config.plugins = ["engines", "*"]
+
+3. For good measure, you should update your JavaScript's to the latest version of Prototype and Scriptaculous.
+
+  rake rails:update:javascripts
